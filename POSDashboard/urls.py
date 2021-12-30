@@ -7,7 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('posadminApp.urls')),
-    path('product/', include('ProductApp.urls', namespace='ProductApp'))
+    path('product/', include('ProductApp.urls', namespace='ProductApp')),
+    path('supplier/', include('SupplierApp.urls', namespace='SupplierApp'))
 ]
 
 if settings.DEBUG:
