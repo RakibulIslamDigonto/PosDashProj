@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'posadminApp',
     'ProductApp',
     'SupplierApp',
+    'PurchaseApp',
+
 ]
 
 
