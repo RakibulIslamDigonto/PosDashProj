@@ -37,13 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     #forms
     'crispy_forms',
-    #apps
+    #apps here
     'posadminApp',
     'ProductApp',
     'SupplierApp',
     'PurchaseApp',
+    'SellApp',
 
 ]
 
@@ -56,7 +58,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #debug
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'POSDashboard.urls'
 
@@ -136,3 +142,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CRISPY forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+#debug
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]

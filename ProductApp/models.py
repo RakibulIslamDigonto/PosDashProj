@@ -52,8 +52,9 @@ class Product(models.Model):
     )
     product_type= models.CharField(choices=Product_Type, max_length=50, default='standard')
     tax=(
-        ('Edclusive', 'Edclusive'),
-        ('Inclusive', 'Inclusive'),
+        ('Exclude', 'Exclude'),
+        ('Include', 'Include'),
+        ('None', 'None'),
         
     )
     name = models.CharField(max_length=60, unique=True)
@@ -62,7 +63,7 @@ class Product(models.Model):
     product_category = models.ForeignKey(Category, on_delete=models.CASCADE)
     cost = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
     price = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-    tax_mathod = models.CharField(choices=tax, max_length=50, default='Exclusive')
+    tax_mathod = models.CharField(choices=tax, max_length=50, default='None')
     quantity = models.PositiveIntegerField(default=0)
     description = models.TextField(blank=True)
     product_image= models.ImageField(verbose_name='Product Image', upload_to='products/', blank=True)

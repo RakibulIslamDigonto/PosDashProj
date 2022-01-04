@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 python-slugify = "*"
 django-crispy-forms = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 

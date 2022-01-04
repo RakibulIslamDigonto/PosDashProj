@@ -110,12 +110,12 @@
                     </a>
                     <ul id="sale" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="../backend/page-list-sale.html">
+                            <a href="{% url 'SellApp:sale-list' %}">
                                 <i class="las la-minus"></i><span>List Sale</span>
                             </a>
                         </li>
                         <li class="">
-                            <a href="../backend/page-add-sale.html">
+                            <a href="{% url 'SellApp:sale-create' %}">
                                 <i class="las la-minus"></i><span>Add Sale</span>
                             </a>
                         </li>
@@ -141,7 +141,7 @@
                     </a>
                     <ul id="purchase" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="../backend/page-list-purchase.html">
+                            <a href="{% url 'PurchaseApp:purchase-list' %}">
                                 <i class="las la-minus"></i><span>List Purchases</span>
                             </a>
                         </li>

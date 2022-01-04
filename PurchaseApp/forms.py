@@ -5,7 +5,7 @@ from .models import Purchase
 class PurchaseFrom(forms.ModelForm):
     class Meta:
         model = Purchase
-        fields = '__all__'
+        exclude = ('slug',)
         
         widgets = {
             'purchase_date': forms.DateInput(attrs={'type': 'date'}),

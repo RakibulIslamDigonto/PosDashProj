@@ -5,9 +5,11 @@ from .models import Purchase
 class PurchaseAdmin(admin.ModelAdmin):
     list_display = [
         'purchase_date', 
-        'purchase_no', 
-        'supplier', 'discount', 
-        'receiver_type', 'order_note', 
-        'shipping'
+        'reference_no', 
+        'supplier', 
+        'purchase_type', 
+        'discount', 
+        'order_note',
+        'shipping',
     ]
 admin.site.register(Purchase, PurchaseAdmin)

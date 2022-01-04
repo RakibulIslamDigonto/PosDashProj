@@ -10,7 +10,10 @@ urlpatterns = [
     path('product/', include('ProductApp.urls', namespace='ProductApp')),
     path('supplier/', include('SupplierApp.urls', namespace='SupplierApp')),
     path('purchase/', include('PurchaseApp.urls', namespace='PurchaseApp')),
+    path('sell/', include('SellApp.urls', namespace='SellApp')),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
