@@ -1,4 +1,3 @@
-
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -11,6 +10,8 @@ urlpatterns = [
     path('supplier/', include('SupplierApp.urls', namespace='SupplierApp')),
     path('purchase/', include('PurchaseApp.urls', namespace='PurchaseApp')),
     path('sell/', include('SellApp.urls', namespace='SellApp')),
+    path('customers/', include('CustomersApp.urls', namespace='CustomersApp')),
+    path('user/', include('UserApp.urls', namespace='UserApp')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
 

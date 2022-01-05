@@ -44,6 +44,10 @@ class SellModel(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
 
+    def __str__(self):
+        return self.reference_no
+
+
     def save(self, *args, **kwargs):
         self.slug=slugify(self.reference_no)
         return super().save(*args, **kwargs)
