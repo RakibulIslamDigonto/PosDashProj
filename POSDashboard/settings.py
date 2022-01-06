@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'PurchaseApp',
     'SellApp',
     'CustomersApp',
-    'UserApp'
+    'UserApp',
+    'AccountApp',
 
 ]
 

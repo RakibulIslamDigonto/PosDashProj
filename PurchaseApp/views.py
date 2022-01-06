@@ -17,18 +17,6 @@ class PurchaseCreateView(CreateView):
     def get_success_url(self):
         messages.success(self.request, 'Your purchase added ')
         return reverse('PurchaseApp:purchase-list')
-    
-
-    # def form_invalid(self, form):
-    #     messages.error(self.request, 'error')
-    #     return super().form_invalid(form)
-
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["Pruducts"] = Product.objects.all()
-    #     return context
-
 
 
 class PurchaseListView(ListView):
@@ -66,7 +54,6 @@ class PurchaseDeleteView(DeleteView):
     def get_success_url(self):
         messages.success(self.request, 'Your purchase delated')
         return reverse('PurchaseApp:purchase-list')
-
 
 
 class PurchaseDetailView(DetailView):

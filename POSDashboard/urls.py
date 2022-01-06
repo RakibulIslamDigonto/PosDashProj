@@ -12,6 +12,7 @@ urlpatterns = [
     path('sell/', include('SellApp.urls', namespace='SellApp')),
     path('customers/', include('CustomersApp.urls', namespace='CustomersApp')),
     path('user/', include('UserApp.urls', namespace='UserApp')),
+    path('account/', include('AccountApp.urls', namespace='AccountApp')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
 
